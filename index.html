@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyNews</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+        
+            <div class="logo">
+               <a href="#"> <img src="assets/mynews-logo.svg" height="24px" alt="mynews-logo"></a>
+            </div>
+            <nav class="nav-links">
+                    <ul>
+                        <li class="hover-link nav-item">Tech</li>
+                        <li class="hover-link nav-item">Finance</li>
+                        <li class="hover-link nav-item">Health</li>
+                    </ul>
+            </nav> 
+            <div class="search">
+                <input type="text" class="new-input" placeholder="e.g Tech">
+                <button class="search-button">Search</button>
+                
+            </div>
+
+    </header>
+
+    <main>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-head">
+                    <img src="assets/mynews-logo.svg"  height="150px" width="100px" alt="news-image" id="news-image">
+                </div>
+                <div class="card-content">
+                    <h3>Title</h3>
+                    <h6>End news is done</h6>
+                    <p class="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, vel. Voluptates nemo nihil sapiente iure quaerat perspiciatis neque in unde.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <h4>Made with 💗 by Farhana</h4>
+    </footer>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
