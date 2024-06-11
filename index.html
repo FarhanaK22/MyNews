@@ -29,19 +29,21 @@
     </header>
 
     <main>
-        <div class="cards-container">
+        <div class="cards-container" id="cards-container">
+
+        </div>
+        <template id="template-news-card">
             <div class="card">
                 <div class="card-head">
-                    <img src="assets/mynews-logo.svg"  height="150px" width="100px" alt="news-image" id="news-image">
+                    <img src="assets/newspic.webp"   alt="news-image" id="news-image">
                 </div>
                 <div class="card-content">
-                    <h3>Title</h3>
-                    <h6>End news is done</h6>
-                    <p class="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, vel. Voluptates nemo nihil sapiente iure quaerat perspiciatis neque in unde.</p>
+                    <h3 class="card-text" id="news-title">Title</h3>
+                    <h5   class="card-text"id="news-sourse">End news is done</h5>
+                    <p   class="card-text"id="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, vel. Voluptates nemo nihil sapiente iure quaerat perspiciatis neque in unde.</p>
                 </div>
             </div>
-        </div>
-
+        </template>
     </main>
     <footer>
         <h4>Made with 💗 by Farhana</h4>
