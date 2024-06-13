@@ -11,18 +11,18 @@
         <header>
         
             <div class="logo">
-               <a href="#"> <img src="assets/mynews-logo.svg" height="24px" alt="mynews-logo"></a>
+               <a href="#" onclick="reload()"> <img src="assets/mynews-logo.svg" height="24px" alt="mynews-logo"></a>
             </div>
             <nav class="nav-links">
                     <ul>
-                        <li class="hover-link nav-item">Tech</li>
-                        <li class="hover-link nav-item">Finance</li>
-                        <li class="hover-link nav-item">Health</li>
+                        <li class="hover-link nav-item" id="Tech" onclick="onNavItemClick('Tech')">Tech</li>
+                        <li class="hover-link nav-item" id="Finance" onclick="onNavItemClick('Finance')">Finance</li>
+                        <li class="hover-link nav-item" id="Health" onclick="onNavItemClick('Health')">Health</li>
                     </ul>
             </nav> 
             <div class="search">
-                <input type="text" class="new-input" placeholder="e.g Tech">
-                <button class="search-button">Search</button>
+                <input type="text" class="new-input"  id="news-input" placeholder="e.g Tech">
+                <button class="search-button" id="search-button">Search</button>
                 
             </div>
 
@@ -50,5 +50,5 @@
     </footer>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="script.js" type="module"></script>
 </html>
