@@ -102,3 +102,60 @@ search.addEventListener('click',()=>
 
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Simulate an API request or any async operation
+    setTimeout(() => {
+        hideLoader();
+        showContent();
+    }, 3000); // Replace with your actual data loading logic and time
+
+    function hideLoader() {
+        const loader = document.getElementById("loader");
+        loader.style.display = "none";
+        const loaderT =  document.querySelector(".loading-text");
+        loaderT.style.display = "none";
+    }
+
+    function showContent() {
+        const content = document.getElementById("content");
+        content.style.display = "block";
+        
+    }
+});
+
+function waveLoadingEffect() {
+    var baseText = "L";
+    var waveText = "❤ADING";
+    var element = document.querySelector(".loading-text");
+    var text = baseText + waveText;
+    var i = 0;
+    var forward = true;
+  
+    function updateText() {
+      if (forward) {
+        if (i < text.length) {
+          element.textContent = text.substring(0, i + 1);
+          i++;
+        } else {
+          forward = false;
+          i--;
+        }
+      } else {
+        if (i >= baseText.length) {
+          element.textContent = text.substring(0, i);
+          i--;
+        } else {
+          forward = true;
+          i++;
+        }
+      }
+    }
+  
+    setInterval(updateText, 350);
+  }
+  
+  waveLoadingEffect();
+  
+  /*This is for the Loading-Text, Which is animated using js*/
+  
