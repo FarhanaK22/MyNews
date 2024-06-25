@@ -17,7 +17,8 @@ async function fetchNews(query) {
     };
   
     try {
-      const response = await fetch("http://localhost:3000/news", options);
+    //   const response = await fetch("http://localhost:3000/news", options);
+      const response = await fetch("https://mynews-74gi.onrender.com/news", options);
       const data = await response.json();
       // console.log(data);
       bindData(data.articles);
