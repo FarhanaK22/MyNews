@@ -3,13 +3,32 @@ const URL = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener('load',()=> fetchNews("India"));
 
-async function fetchNews (query)
-{
-   const res = await fetch(`${URL}${query}&apiKey=${API_KEY}`);
-   const data = await res.json();
-   console.log(data);
-   bindData(data.articles);
-}
+async function fetchNews(query) {
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        URL,
+        query,
+        API_KEY,
+      }),
+    };
+  
+    try {
+      const response = await fetch("http://localhost:3000/news", options);
+      const data = await response.json();
+      // console.log(data);
+      bindData(data.articles);
+    } catch (error) {
+      console.error(error);
+    }
+    //   console.log(res);
+    //   const data = await res.json();
+    //   console.log(data);
+      
+  }
 
 function reload()
 {
